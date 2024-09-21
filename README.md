@@ -1,3 +1,19 @@
+# SEBI Contracts
+
+Stellar Equity-based Blockchain Interface (SEBI) is a decentralized protocol on top of Stellar Blockchain that enables businesses to issue equity tokens on-chain easily to raise capital from the global markets, and consumers are protected with regulatory features known to them like upper/lower circuits, day time trading, KYCs, dividends and more. This makes it easy for existing retail investors to experience blockchain based trading with zero to no learning curve.
+
+
+## SEBI Contracts Features
+The SEBI contracts repository contains the following features:
+- **Equity Token Standard**
+Smart contracts enabling the issuance of equity tokens on the blockchain. These tokens are a modified version of the standard ERC-20 like interface, it is designed to simulate equity shares rather than a currency. These holds the regulation rules for on-chain equity issuance like `max_ownership`, `range` (circuit breaker), `humanOnly` (world id based human-check), etc.
+
+- **Uniswap v4 Hook**
+Uniswap v4 introduces hooks concept that gets called during the pool executions, we have implemented a `beforeSwap` flagged hook for our usecase to build a regulated exchange that checks if the transaction touches the upper/lower circuit for the token then stops the trading for the day.
+
+
+Built on top of the hooks scaffold 
+
 # scaffold-hook
 
 _Develop and test Uniswap v4 Hooks with minimal interfaces for the swap lifecycle (pool creation, liquidity provision, and swapping)_
